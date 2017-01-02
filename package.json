@@ -1,0 +1,30 @@
+{
+  "name": "pinche",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realywithoutname/pinche.git"
+  },
+  "author": "liuJD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realywithoutname/pinche/issues"
+  },
+  "homepage": "https://github.com/realywithoutname/pinche#readme",
+  "dependencies": {
+    "koa": "^2.0.0-alpha.7",
+    "koa-route": "^2.4.2",
+    "koa-router": "^7.0.1",
+    "koa-session": "^3.4.0",
+    "koa-static-cache": "^3.1.7",
+    "koa-websocket": "^2.1.0",
+    "mongoose": "^4.7.5",
+    "superagent": "^3.3.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "User",
+  "prototype": {
+    "openid": {
+      "type": "string"
+    },
+    "avatarUrl": {
+      "type": "String"
+    },
+    "gender": {
+      "type": "Number"
+    },
+    "nickname": {
+      "type": "String"
+    }
+  }
+}

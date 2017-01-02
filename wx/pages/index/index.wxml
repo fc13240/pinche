@@ -1,0 +1,46 @@
+<view class="container">
+  <form bindsubmit="submit">
+    <view class="weui-cell">
+      <view class="weui-cell-hd">出发地</view>
+      <view class="weui-cell-bd">
+        <input name="startPoint" placeholder="请输入出发地"/>
+      </view>
+      <view class="weui-cell-ft" bindtap="startPointTap">
+        <image class="location-icon" src="/images/location.png"/>
+      </view>
+    </view>
+    <view hidden="{{!startMapShow}}" style="height: 200px">
+      <include src="/common/map.wxml"/>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell-hd">目的地</view>
+      <view class="weui-cell-bd">
+        <input name="endPoint" placeholder="请输入目的地"/>
+      </view>
+      <view class="weui-cell-ft" bindtap="endPointTap">
+        <image class="location-icon" src="/images/location.png"/>
+      </view>
+    </view>
+    <view hidden="{{!endMapShow}}" style="height: 200px">
+      <include src="/common/map.wxml"/>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell-hd">手机号</view>
+      <view class="weui-cell-bd">
+        <input name="phone" type="number"/>
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell-hd">乘车人数</view>
+      <view class="weui-cell-bd">
+        <input name="persons" type="number"/>
+      </view>
+      <view class="weui-cell-ft">
+        <button type="primary" plain="{{true}}">人</button>
+      </view>
+    </view>
+    <view class="p-submit">
+      <button type="primary" form-type="submit">提交</button>
+    </view>
+  </form>
+</view>

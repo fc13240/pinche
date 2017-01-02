@@ -1,0 +1,51 @@
+{
+  "name": "Order",
+  "prototype": {
+    "startPoint": {
+      "loc": {
+        "type": ["Number"],
+        "index": {
+          "type": "2dsphere",
+          "sparse": true
+        },
+        "required": true
+      },
+      "label": {
+        "type": "String",
+        "required": true
+      }
+    },
+    "endPoint": {
+      "loc": {
+        "type": ["Number"],
+        "index": {
+          "type": "2dsphere",
+          "sparse": true
+        },
+        "required": true
+      },
+      "label": {
+        "type": "String",
+        "required": true
+      }
+    },
+    "createAt": {
+      "type": "Date",
+      "default": "",
+      "required": true
+    },
+    "phone": {
+      "type": "Number",
+      "required": true
+    },
+    "userId": {
+      "type": "ObjectId",
+      "required": true,
+      "ref": "User"
+    },
+    "persons": {
+      "type": "Number",
+      "required": true
+    }
+  }
+}

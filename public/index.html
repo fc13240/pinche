@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>socket test</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    let order = new WebSocket('ws://localhost:3000/ws/orders')
+    order.onopen = () => {
+      console.log('socket open success');
+      let data = {
+        startPoint: {
+          loc: [120.15455501586912, 30.27515981260968],
+          label: '鬼地方'
+        },
+        endPoint: {
+          loc: [120.15717285186766, 30.27404793728631],
+          label: '鬼地方'
+        },
+        phone: 1345678910,
+        persons: 2
+      }
+
+      order.send(JSON.stringify(data))
+      order.onmessage = (event) => {
+        console.log(event);
+      }
+    }
+    // let lbs = new WebSocket('ws://localhost:3000/ws/lbs')
+    // lbs.onopen = () => {
+    //   console.log('socket open success');
+    //   lbs.send('lbs')
+    //   lbs.onmessage = (event) => {
+    //     console.log(event);
+    //   }
+    // }
+  </script>
+</html>

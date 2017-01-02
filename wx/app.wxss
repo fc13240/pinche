@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "common/common.wxss";
+.container {
+  box-sizing: border-box;
+  position: relative;
+}
+page {
+  min-height: 100%;
+  background: #eee;
+}

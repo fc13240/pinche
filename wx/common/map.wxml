@@ -1,0 +1,19 @@
+<view class="map-container">
+    <map id="map"
+    class="points-map"
+    longitude="{{center.longitude}}"
+    latitude="{{center.latitude}}"
+    scale="{{zoom}}"
+    markers="{{markers}}"
+    controls="{{controls}}"
+    bindtap="maptap"
+    bindcontroltap="controltap"
+    bindmarkertap="markertap"
+    bindregionchange="regionchange"
+    show-location="true"></map>
+</view>
+<view class="controls">
+    <button bindtap="scaleLarge">+</button>
+    <button bindtap="location">v</button>
+    <button bindtap="scaleSmall">-</button>
+</view>

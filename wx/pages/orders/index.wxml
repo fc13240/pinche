@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="weui-panel">
+    <view class="weui-panel-hd">以下数据根据你的地理位置所得</view>
+    <view class="weui-panel-bd">
+      <view wx:for="{{orders}}" wx:for-item="order" class="weui-media-box weui-media-box-appmsg">
+        <view class="weui-media-box-hd">
+          <image class="weui-media-box-thumb" src="{{order.avatarUrl}}"/>
+        </view>
+        <view class="weui-media-box-bd">
+          <view class="weui-media-box-title">
+            <text class="nickname">{{order.nickname}}</text>
+            <view class="phone">
+              <image class="icon" src="/images/phone.png"/>
+              <text>{{order.phone}}</text>
+            </view>
+          </view>
+          <view class="weui-media-box-desc">
+            <view>
+              <image class="icon" src="/images/location.png"/>
+              <text>{{order.startPoint.label}}</text>
+            </view>
+            <view>
+              <image class="icon" src="/images/end-point.png"/>
+              <text>{{order.endPoint.label}}</text>
+            </view>
+            <view>
+              <image class="icon" src="/images/time.png"/>
+              <text>{{order.createTime}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

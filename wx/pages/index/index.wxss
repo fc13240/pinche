@@ -1,0 +1,8 @@
+.p-submit {
+  padding: 15px;
+}
+.location-icon {
+  width: 18px;
+  height: 18px;
+  padding: 6px;
+}
